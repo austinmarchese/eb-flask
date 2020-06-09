@@ -1,0 +1,35 @@
+{
+  "test": {
+    "position":"RB",
+    "response": "RB"
+  },
+  "HoopAu00": {
+    "position":["", "te", "te", "TE", ""],
+    "response": "TE"
+  },
+  "SambTy00": {
+    "position":["", "", "", "", "", ""],
+    "response": ""
+  },
+  "AddaJa00": {
+    "position":["","/S/SS", "DB/db/S/SS", "S/SS", "SS", "SS", "S/SS", "S/s", ""],
+    "response": ""
+  },
+  "WattJ.00": {
+    "position":["LDE", "RDE", "", "LDE", "LDE", "LDE", "", "LDE", "LDE", "LDE"],
+    "response": ""
+  },
+  "ReidJu00": {
+    "position":["FS", "FS", ""],
+    "response": ""
+  },
+  "CrosMa20": {
+    "position":["", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+    "response": "K"
+  },
+  "CousKi00":
+  {
+    "position":["", "qb", "qb", "QB", "QB", "QB", "QB", "QB", ""],
+    "response": "QB"
+  }
+}

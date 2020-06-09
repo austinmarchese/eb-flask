@@ -1,0 +1,216 @@
+{
+  "On This Weeks Episode we are going to discuss Cleveland Browns": [
+    {
+      "type": "team",
+      "value": "Cleveland Browns"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "On This Weeks Episode we are going to discuss the Cleveland Browns": [
+    {
+      "type": "team",
+      "value": "Cleveland Browns"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "On This Weeks Episode we are speaking with Mike Tomlin about the state of the NFL": [
+    {
+      "type": "team",
+      "value": "Pittsburgh Steelers"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "person",
+      "value": "Mike Tomlin"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "We look at the 15 teams in the Western Conference, including Dallas' trade options for Dennis Smith Jr., the Lakers'' recent struggles, OKC's Terrance Ferguson, and more.": [
+    {
+      "type": "team",
+      "value": "New York Knicks"
+    },
+    {
+      "type": "team",
+      "value": "Dallas Mavericks"
+    },
+    {
+      "type": "person",
+      "value": "Dennis Smith"
+    },
+    {
+      "type": "position",
+      "value": "PG"
+    },
+    {
+      "type": "league",
+      "value": "NBA"
+    },
+    {
+      "type": "team",
+      "value": "Los Angeles Lakers"
+    },
+    {
+      "type": "team",
+      "value": "Oklahoma City Thunder"
+    },
+    {
+      "type": "person",
+      "value": "Terrance Ferguson"
+    },
+    {
+      "type": "position",
+      "value": "SF"
+    },
+    {
+      "type": "sport",
+      "value": "Basketball"
+    }
+  ],
+  "DAL-MIN": [
+    {
+      "type": "team",
+      "value": "Dallas Cowboys"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "team",
+      "value": "Minnesota Vikings"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "NYG-DAL": [
+    {
+      "type": "team",
+      "value": "Dallas Cowboys"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "team",
+      "value": "New York Giants"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "NYG@DAL": [
+    {
+      "type": "team",
+      "value": "Dallas Cowboys"
+    },
+    {
+      "type": "league",
+      "value": "NFL"
+    },
+    {
+      "type": "team",
+      "value": "New York Giants"
+    },
+    {
+      "type": "sport",
+      "value": "Football"
+    }
+  ],
+  "Marty talks with Niall Horan at Augusta about his love for golf": [
+    {
+      "type": "sport",
+      "value": "Golf"
+    },
+    {
+      "type": "person",
+      "value": "Niall Horan"
+    }
+  ],
+  "Lakers & Clippers": [
+    {
+      "type": "team",
+      "value": "Los Angeles Lakers"
+    },
+    {
+      "type": "league",
+      "value": "NBA"
+    },
+    {
+      "type": "team",
+      "value": "Los Angeles Clippers"
+    },
+    {
+      "type": "sport",
+      "value": "Basketball"
+    }
+  ],
+  "LeBron James Stars": [
+    {
+      "type": "team",
+      "value": "Los Angeles Lakers"
+    },
+    {
+      "type": "league",
+      "value": "NBA"
+    },
+    {
+      "type": "person",
+      "value": "Lebron James"
+    },
+    {
+      "type": "position",
+      "value": "SF"
+    },
+    {
+      "type": "person",
+      "value": "Lebron James Stars"
+    },
+    {
+      "type": "sport",
+      "value": "Basketball"
+    }
+  ],
+  "Yohann Auvitu": [
+    {
+      "type": "team",
+      "value": "New Jersey Devils"
+    },
+    {
+      "type": "league",
+      "value": "NHL"
+    },
+    {
+      "type": "person",
+      "value": "Yohann Auvitu"
+    },
+    {
+      "type": "sport",
+      "value": "Hockey"
+    }
+  ]
+}
