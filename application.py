@@ -1,71 +1,48 @@
 import json
 
 from flask import Flask, request
-
 from flask_api import status
-from src.main.tag_identifier import TagIdentifier
-from src.main.tagging_algos.tagging_enums.optimization_tool_mapping import OptimizationToolMapping
-from src.main.utils.logger_initializer import *
+import stanza
+stanza.download('en')
+nlp = stanza.Pipeline(lang='en', processors="TOKENIZE,POS,NER")
 app = Flask(__name__)
-PARENT_DIR = os.getcwd()
-initialize_logger(PARENT_DIR)
+import os
 
 @app.route('/actuator')
 def actuator():
-    logging.info("actuator")
-    return "success", status.HTTP_200_OK
+    ent = nlp("Barack Obama was born in Hawaii.").entities
+    print(ent)
 
-@app.route('/getTags', methods=["GET"])
-def getTags():
-    description = request.args.get('description')
-    if description is None or len(description) == 0:
-        logging.error(f"getTags processing {description}")
-        return "please provide desscription in url", status.HTTP_400_BAD_REQUEST
-    else:
-        try:
-            logging.info(f"getTags processing {description}")
-            subgenre = request.args.get('subgenre')
-            if subgenre == 'FOOTBALL':
-                tags = TagIdentifier().generate_tags_on_genre(description, 'sports', OptimizationToolMapping.FOOTBALL)
-            elif subgenre == 'BASKETBALL':
-                tags = TagIdentifier().generate_tags_on_genre(description, 'sports', OptimizationToolMapping.BASKETBALL)
-            else:
-                tags = TagIdentifier().generate_tags_on_genre(description, 'sports')
-        except Exception as e:
-            logging.critical(f"getTags error for description:{description}, error:{e}")
-            return str(e), status.HTTP_500_INTERNAL_SERVER_ERROR
-    logging.info(f"getTags successful description: {description}, tags: {tags}")
-    return json.dumps(tags)
+    return str(ent), status.HTTP_200_OK
 
 
-@app.route('/nlp', methods=["GET"])
-def getNLP():
-    description = request.args.get('description')
-    if description is None or len(description) == 0:
-        return "please provide desscription in url", status.HTTP_400_BAD_REQUEST
-    else:
-        pass
-    tags = TagIdentifier().base_handler.util.get_normalized_and_filtered_nlp_entities(description)
-    return json.dumps(tags)
-
+# @app.route('/test', methods=["GET"])
+# def test():
+#     description = request.args.get('description')
+#     if description is None or len(description) == 0:
+#         return "please provide desscription in url", status.HTTP_400_BAD_REQUEST
+#     else:
+#         pass
+#     tags = Check().ab(description)
+#     return json.dumps(tags)
 
 @app.route('/getTagsFromBody', methods=["GET", "POST"])
 def getTagsFromBody():
     try:
+        # request_text = request.data.decode('utf-8')
+        # print(request_text)
+        print(request.json)
         data = request.json
+        # content = json.loads(request_text)
+        # description = content['description']
+        # print(descripti)
         description = data['description']
+        print(description)
     except Exception as e:
         print(e)
-        logging.error(f"getTags processing {request.data}")
-        return "please provide description in json", status.HTTP_400_BAD_REQUEST
-    try:
-        tags = TagIdentifier().generate_tags_on_genre(description, 'sports')
-    except Exception as e:
-        logging.critical(f"getTagstanza.downloads error for description:{description}, error:{e}")
-        return str(e), status.HTTP_500_INTERNAL_SERVER_ERROR
-    logging.info(f"getTags successful description: {description}, tags: {tags}")
-    return json.dumps(tags)
+        return "please provide description in json %s" % e, status.HTTP_400_BAD_REQUEST
 
+    return json.dumps(description)
 
 # run the app.
 if __name__ == "__main__":
